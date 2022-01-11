@@ -9,16 +9,58 @@ class XylophoneApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Center(
-            child: TextButton(
-              onPressed: () {
-                final player = AudioCache();
-                player.play("note1.wav");
-              },
-              child: Text(
-                'Click Me',
+          child: Column(
+            children: [
+              MaterialButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play("note1.wav");
+                },
+                color: Colors.red,
               ),
-            ),
+              MaterialButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play("note2.wav");
+                },
+                color: Colors.orange,
+              ),
+              MaterialButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play("note3.wav");
+                },
+                color: Colors.yellow,
+              ),
+              MaterialButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play("note4.wav");
+                },
+                color: Colors.green,
+              ),
+              MaterialButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play("note5.wav");
+                },
+                color: Colors.teal,
+              ),
+              MaterialButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play("note6.wav");
+                },
+                color: Colors.blue,
+              ),
+              MaterialButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play("note7.wav");
+                },
+                color: Colors.purple,
+              ),
+            ],
           ),
         ),
       ),
