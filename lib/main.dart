@@ -9,70 +9,33 @@ class XylophoneApp extends StatelessWidget {
     player.play('note$soundNumber.wav');
   }
 
+  buildKey(int soundNumber) {
+    return Expanded(
+      child: MaterialButton(
+        onPressed: () {
+          playSound(soundNumber);
+        },
+        color: Colors.red,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(1);
-                  },
-                  color: Colors.red,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(3);
-                  },
-                  color: Colors.yellow,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(2);
-                  },
-                  color: Colors.orange,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(4);
-                  },
-                  color: Colors.green,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(5);
-                  },
-                  color: Colors.teal,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(6);
-                  },
-                  color: Colors.blue,
-                ),
-              ),
-              Expanded(
-                child: MaterialButton(
-                  onPressed: () {
-                    playSound(7);
-                  },
-                  color: Colors.purple,
-                ),
-              ),
+              buildKey(1),
+              buildKey(2),
+              buildKey(3),
+              buildKey(4),
+              buildKey(5),
+              buildKey(6),
+              buildKey(7),
             ],
           ),
         ),
